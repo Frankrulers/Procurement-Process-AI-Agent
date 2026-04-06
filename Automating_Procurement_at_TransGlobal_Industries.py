@@ -2,17 +2,10 @@
 # coding: utf-8
 
 # ## Authors- 
-# ##### *Abhinav Kumar*- FT251002
-# 
-# ##### *Aditi Sharma*- FT251005
-# 
-# ##### *Aditya Gupta*- FT251006
 # 
 # ##### *Ambika Prasad Swain*- FT251013
 # 
-# ##### *Mayank Agrawal*- FT201042
-# 
-# ##### *Kaustuv Bhattacharya*- FT252043
+
 
 # # Objective:
 # ### The objective of this assignment is to design, implement, and evaluate an AI-driven procurement automation system for TransGlobal Industries. The solution should leverage Large Language Models (LLMs), LangChain, and Streamlit to streamline key procurement processes.
