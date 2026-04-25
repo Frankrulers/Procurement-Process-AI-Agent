@@ -2,10 +2,15 @@
 # coding: utf-8
 
 # ## Authors- 
+# ##### *Abhinav Kumar*- FT251002
+# 
+# ##### *Aditi Sharma*- FT251005
+# 
+# ##### *Aditya Gupta*- FT251006
 # 
 # ##### *Ambika Prasad Swain*- FT251013
 # 
-
+# ##### *Kaustuv Bhattacharya*- FT252043
 
 # # Objective:
 # ### The objective of this assignment is to design, implement, and evaluate an AI-driven procurement automation system for TransGlobal Industries. The solution should leverage Large Language Models (LLMs), LangChain, and Streamlit to streamline key procurement processes.
@@ -44,7 +49,7 @@ print(f"pandas version: {pd.__version__}")
 
 
 # Load API Key
-GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     st.error("Google API Key is missing! Set the GEMINI_API_KEY environment variable.")
     st.stop()
@@ -55,7 +60,7 @@ if not GOOGLE_API_KEY:
 
 # Initialize LLM with a low temperature (0.1)
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash",
+    model="gemini-3-flash-preview",
     google_api_key=GOOGLE_API_KEY,
     temperature=0.1
 )
@@ -301,12 +306,12 @@ if "vendor_history_df" not in st.session_state:
 
 
 # Configure page
-st.set_page_config(page_title="TransGlobal Industries Procurement Automation System", layout="wide")
+st.set_page_config(page_title="Procurement Automation System", layout="wide")
 
 # Header with blue rectangle and white text
 st.markdown(
     '<div style="background-color: blue; padding: 10px;">'
-    '<h1 style="color: white; text-align: center;">TransGlobal Industries Procurement Automation System</h1>'
+    '<h1 style="color: white; text-align: center;">Procurement Automation System</h1>'
     '</div>',
     unsafe_allow_html=True
 )
@@ -528,7 +533,7 @@ with st.expander("Step 5: Bid Evaluation"):
                 extract_bids_prompt = PromptTemplate(
                     input_variables=["shortlisted_vendors", "bids_data"],
                     template="""
-Context: TransGlobal Industries procurement process.
+Context:TransGlobal Industries Automated procurement process.
 Role: You are a bid data extraction specialist.
 Task: Identify and extract the COMPLETE bid data ONLY for the following shortlisted vendors.
 Action: Return ONLY the complete bid data for these vendors. If a vendor has no bid in the "All Bids" data, skip it. Return each bid on a new line. If the vendor name can not be found in the all bids, skip it.
@@ -636,7 +641,7 @@ st.markdown("""
         }
     </style>
     <div class="fixed-footer">
-        TransGlobal Industries Procurement Automation System | Powered by LangChain & Google Gemini Al
+         Procurement Automation System | Powered by LangChain & Google Gemini Al 
     </div>
     """, unsafe_allow_html=True)
 
